@@ -86,7 +86,7 @@ document
         }
       })
       .catch((error) => {
-        console.error("Error al enviar datos:", error);
+        console.error("Error al enviar datos:", error.message || error);
         alert("Hubo un error enviando los datos. Por favor intenta de nuevo.");
       });
   });
