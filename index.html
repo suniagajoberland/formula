@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Solicitar Lista de Precios</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>📋 Solicitar Lista de Precios</h1>
+
+      <form id="priceListForm">
+        <div class="form-group">
+          <label for="name">Nombre completo:</label>
+          <input type="text" id="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Número de WhatsApp (ejemplo +521234567890):</label>
+          <input type="tel" id="phone" placeholder="+521234567890" required />
+        </div>
+
+        <div class="form-group">
+          <label>Seleccione los productos de interés:</label>
+          <div class="checkbox-group">
+            <div class="checkbox-item">
+              <input type="checkbox" id="product1" value="Hikvision" />
+              <label for="product1">Hikvision</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="product2" value="Hilook" />
+              <label for="product2">Hilook</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="product3" value="Ubiquiti" />
+              <label for="product3">Ubiquiti</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="product4" value="Mikrotik" />
+              <label for="product4">Mikrotik</label>
+            </div>
+            <div class="checkbox-item">
+              <input
+                type="checkbox"
+                id="product5"
+                value="Todos los productos"
+              />
+              <label for="product5">Todos los productos</label>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn">Enviar solicitud via WhatsApp</button>
+      </form>
+
+      <div id="successMessage" class="success-message" style="display: none">
+        ✅ Mensaje preparado para WhatsApp.
+      </div>
+
+      <div id="errorMessage" class="error-message" style="display: none">
+        ❌ Por favor revisa que los datos estén correctos.
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
